@@ -1,6 +1,6 @@
 <div *ngIf="!isEmployeeLoggedIn && !isAdminLoggedIn">
     <mat-toolbar color="primary" class="navbar">
-       <img src="../assets/logo.png" alt="TaskFlow Logo" class="logo"/>
+        <img src="../assets/logo.png" alt="TaskFlow Logo" class="logo"/>
         <span class="spacer"></span>
         <button mat-button routerLink="/signup" routerLinkActive="active">Register</button>
         <button mat-button routerLink="/login" routerLinkActive="active">Login</button>
@@ -8,7 +8,6 @@
             <mat-icon>{{ isDarkMode ? 'brightness_7' : 'brightness_4' }}</mat-icon>
         </button>
     </mat-toolbar>
-    
 
     <!-- Section Présentation -->
     <div class="presentation">

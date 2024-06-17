@@ -21,8 +21,8 @@
   
 }
 .logo{
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   margin-right: 8px;
 }
 .startedButton{
@@ -92,42 +92,46 @@ button.mat-icon-button {
   font-size: 18px;
   color: #333;
 }
-
-
-/* Responsive Styles */
 @media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-brand {
-    margin-bottom: 16px;
-  }
-
-  .spacer {
-    display: none;
-  }
-
-  .presentation h1 {
-    font-size: 28px;
-  }
-
-  .presentation p {
-    font-size: 16px;
-  }
-
-  .presentation .homePage {
-    max-width: 70%;
-  }
-
-  .admin-dashboard h2,
-  .employee-dashboard h2 {
-    font-size: 24px;
-  }
-
-  .admin-dashboard p,
-  .employee-dashboard p {
-    font-size: 16px;
+  body {
+      overflow: hidden;
   }
 }
+
+// /* Responsive Styles */
+// @media screen and (max-width: 768px) {
+//   .navbar {
+//     flex-direction: column;
+//     align-items: flex-start;
+//   }
+
+//   .navbar-brand {
+//     margin-bottom: 16px;
+//   }
+
+//   .spacer {
+//     display: none;
+//   }
+
+//   .presentation h1 {
+//     font-size: 28px;
+//   }
+
+//   .presentation p {
+//     font-size: 16px;
+//   }
+
+//   .presentation .homePage {
+//     max-width: 70%;
+//   }
+
+//   .admin-dashboard h2,
+//   .employee-dashboard h2 {
+//     font-size: 24px;
+//   }
+
+//   .admin-dashboard p,
+//   .employee-dashboard p {
+//     font-size: 16px;
+//   }
+// }
