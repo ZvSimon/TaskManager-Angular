@@ -26,7 +26,6 @@ export class DashboardComponent {
 
   updateStatus(id: number, status: string) {
     this.employeeService.updateTask(id, status).subscribe((res) => {
-      console.log(res);
       if (res.id != null) {
         this.snackBar.open('Task updated successfully', 'Close', {
           duration: 5000

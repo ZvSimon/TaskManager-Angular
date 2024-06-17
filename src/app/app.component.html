@@ -1,6 +1,6 @@
 <div *ngIf="!isEmployeeLoggedIn && !isAdminLoggedIn">
     <mat-toolbar color="primary" class="navbar">
-        <span class="navbar-brand">TaskFlow</span>
+       <img src="../assets/logo.png" alt="TaskFlow Logo" class="logo"/>
         <span class="spacer"></span>
         <button mat-button routerLink="/signup" routerLinkActive="active">Register</button>
         <button mat-button routerLink="/login" routerLinkActive="active">Login</button>
@@ -8,17 +8,20 @@
             <mat-icon>{{ isDarkMode ? 'brightness_7' : 'brightness_4' }}</mat-icon>
         </button>
     </mat-toolbar>
+    
 
     <!-- Section Présentation -->
     <div class="presentation">
         <h1>Welcome to TaskFlow</h1>
         <p>Your ultimate tool for project management. Register or login to get started.</p>
+        <img src="../assets/homePage.webp" alt="Project Team" class="homePage"/>
+        <button mat-raised-button color="primary" routerLink="/signup" class="startedButton">Get Started 🚀 </button>
     </div>
 </div>
 
 <div *ngIf="isAdminLoggedIn">
     <mat-toolbar color="primary" class="navbar">
-        <span class="navbar-brand">TaskFlow</span>
+        <img src="../assets/logo.png" alt="TaskFlow Logo" class="logo"/>
         <span class="spacer"></span>
         <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</button>
         <button mat-button routerLink="/admin/task/post" routerLinkActive="active">Post Task</button>
@@ -37,7 +40,7 @@
 
 <div *ngIf="isEmployeeLoggedIn">
     <mat-toolbar color="primary" class="navbar">
-        <span class="navbar-brand">TaskFlow</span>
+        <img src="../assets/logo.png" alt="TaskFlow Logo" class="logo"/>
         <span class="spacer"></span>
         <button mat-button routerLink="/employee/dashboard" routerLinkActive="active">Dashboard</button>
         <button mat-button routerLinkActive="active" (click)="logout()">Logout</button>

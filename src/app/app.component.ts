@@ -37,7 +37,6 @@ export class AppComponent implements OnInit {
   }
 
   toggleDarkMode(): void {
-    console.log('toggleDarkMode called');
     this.isDarkMode = !this.isDarkMode;
     this.updateTheme();
     // Save user preference
@@ -45,7 +44,6 @@ export class AppComponent implements OnInit {
   }
 
   updateTheme(): void {
-    console.log('updateTheme called with isDarkMode:', this.isDarkMode);
     if (this.isDarkMode) {
       this.renderer.addClass(document.body, 'dark-theme');
     } else {

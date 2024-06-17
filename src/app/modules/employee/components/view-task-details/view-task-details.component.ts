@@ -33,7 +33,6 @@ export class ViewTaskDetailsComponent {
   getTaskById() {
     this.employeeService.getTaskById(this.taskId).subscribe(res =>{
       this.taskData = res;
-      console.log(this.taskData);
       this.getCommentsByPost();
     }, error =>{
       this.matSnackBar.open("Something Went Wrong!!!!", "Ok")
@@ -45,8 +44,6 @@ export class ViewTaskDetailsComponent {
 
     ).subscribe(
       (response) => {
-        // Handle the response as needed
-        console.log('Comment created successfully:', response);
         this.matSnackBar.open("Comment Published Successfully", "Ok");
         this.getCommentsByPost();
       },
@@ -61,7 +58,6 @@ export class ViewTaskDetailsComponent {
   getCommentsByPost() {
     this.employeeService.getAllCommentsByTaskId(this.taskId).subscribe(res => {
       this.comments = res;
-      console.log(this.comments)
     }, error => {
       this.matSnackBar.open("Something Went Wrong!!!!", "Ok")
     })
