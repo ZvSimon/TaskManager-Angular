@@ -1,32 +1,44 @@
+/* Container Styles */
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 90vh;
+  align-items: flex-start; /* Change align-items to flex-start */
+  height: 100vh;
+  background-color: #e0f7fa; /* Light cyan background */
+  padding: 20px 16px; /* Adjust padding */
 }
 
+/* Card Styles */
 mat-card {
-  max-width: 400px;
+  max-width: 600px; /* Increase max-width to 600px */
   width: 100%;
-  padding: 20px;
+  padding: 40px; /* Increase padding for better spacing */
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  margin-top: 20px; /* Add margin-top to create space from Welcome text */
 
   @media screen and (max-width: 500px) {
     max-width: 90%;
+    padding: 20px; /* Reduce padding on smaller screens */
   }
 }
 
+/* Card Title Styles */
 mat-card-title {
   text-align: center;
-  font-size: 24px;
+  font-size: 28px; /* Increase font size */
   margin-bottom: 20px;
+  color: #00796b; /* Teal color for title */
 }
 
+/* Form Styles */
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Form Field Styles */
 mat-form-field {
   width: 100%;
   margin-bottom: 20px;
@@ -36,9 +48,10 @@ button {
   width: 100%;
 }
 
+/* Responsive Styles */
 @media screen and (max-width: 500px) {
   mat-card-title {
-    font-size: 20px;
+    font-size: 24px; /* Adjust font size for smaller screens */
   }
 
   mat-form-field {
@@ -46,6 +59,26 @@ button {
   }
 }
 
+/* Error Snackbar Styles */
 .error-snackbar {
-  background-color: #f44336 !important;
+  background-color: #f44336 !important; /* Red background for error snackbar */
+}
+
+/* Welcome Section Styles */
+.presentation {
+  padding: 32px 0; /* Adjust padding */
+  text-align: center;
+  background-color: #e0f7fa; /* Light cyan background */
+}
+
+.presentation h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+  color: #00796b; /* Teal color for heading */
+}
+
+.presentation p {
+  font-size: 18px;
+  color: #004d40; /* Darker teal color for paragraph */
+  margin-bottom: 0; /* Remove bottom margin to reduce space */
 }

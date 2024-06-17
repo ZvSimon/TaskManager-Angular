@@ -1,47 +1,56 @@
 <div *ngIf="!isEmployeeLoggedIn && !isAdminLoggedIn">
-  <mat-toolbar color="primary" class="navbar">
-    <span class="navbar-brand">TaskFlow</span>
-    <span class="spacer"></span>
-    <button mat-button routerLink="/signup" routerLinkActive="active">
-      Register
-    </button>
-    <button mat-button routerLink="/login" routerLinkActive="active">
-      Login
-    </button>
-  </mat-toolbar>
+    <mat-toolbar color="primary" class="navbar">
+        <span class="navbar-brand">TaskFlow</span>
+        <span class="spacer"></span>
+        <button mat-button routerLink="/signup" routerLinkActive="active">Register</button>
+        <button mat-button routerLink="/login" routerLinkActive="active">Login</button>
+        <button mat-icon-button (click)="toggleDarkMode()">
+            <mat-icon>{{ isDarkMode ? 'brightness_7' : 'brightness_4' }}</mat-icon>
+        </button>
+    </mat-toolbar>
+
+    <!-- Section Présentation -->
+    <div class="presentation">
+        <h1>Welcome to TaskFlow</h1>
+        <p>Your ultimate tool for project management. Register or login to get started.</p>
+    </div>
 </div>
 
 <div *ngIf="isAdminLoggedIn">
-  <mat-toolbar color="primary" class="navbar">
-    <span class="navbar-brand">TaskFlow</span>
-    <span class="spacer"></span>
-    <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">
-      Dashboard
-    </button>
-    <button mat-button routerLink="/admin/task/post" routerLinkActive="active">
-      Post Task
-    </button>
-    <button mat-button routerLinkActive="active" (click)="logout()">
-      Logout
-    </button>
-  </mat-toolbar>
+    <mat-toolbar color="primary" class="navbar">
+        <span class="navbar-brand">TaskFlow</span>
+        <span class="spacer"></span>
+        <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</button>
+        <button mat-button routerLink="/admin/task/post" routerLinkActive="active">Post Task</button>
+        <button mat-button routerLinkActive="active" (click)="logout()">Logout</button>
+        <button mat-icon-button (click)="toggleDarkMode()">
+            <mat-icon>{{ isDarkMode ? 'brightness_7' : 'brightness_4' }}</mat-icon>
+        </button>
+    </mat-toolbar>
+
+    <!-- Section Dashboard Admin -->
+    <div class="admin-dashboard">
+        <h2>Admin Dashboard</h2>
+        <p>Manage your projects and tasks efficiently.</p>
+    </div>
 </div>
 
 <div *ngIf="isEmployeeLoggedIn">
-  <mat-toolbar color="primary" class="navbar">
-    <span class="navbar-brand">TaskFlow</span>
-    <span class="spacer"></span>
-    <button
-      mat-button
-      routerLink="/employee/dashboard"
-      routerLinkActive="active"
-    >
-      Dashboard
-    </button>
-    <button mat-button routerLinkActive="active" (click)="logout()">
-      Logout
-    </button>
-  </mat-toolbar>
+    <mat-toolbar color="primary" class="navbar">
+        <span class="navbar-brand">TaskFlow</span>
+        <span class="spacer"></span>
+        <button mat-button routerLink="/employee/dashboard" routerLinkActive="active">Dashboard</button>
+        <button mat-button routerLinkActive="active" (click)="logout()">Logout</button>
+        <button mat-icon-button (click)="toggleDarkMode()">
+            <mat-icon>{{ isDarkMode ? 'brightness_7' : 'brightness_4' }}</mat-icon>
+        </button>
+    </mat-toolbar>
+
+    <!-- Section Dashboard Employé -->
+    <div class="employee-dashboard">
+        <h2>Employee Dashboard</h2>
+        <p>Track your tasks and collaborate with your team.</p>
+    </div>
 </div>
 
 <router-outlet></router-outlet>

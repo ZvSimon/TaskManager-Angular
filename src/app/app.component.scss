@@ -1,29 +1,112 @@
-.navbar {
+/* Container Styles */
+.container {
   display: flex;
+  justify-content: center;
+  align-items: center; /* Align center vertically */
+  min-height: 100vh; /* Ensure the container takes full viewport height */
+  background-color: #e0f7fa; /* Light cyan background */
+  padding: 20px 16px; /* Adjust padding */
+  box-sizing: border-box; /* Include padding in height calculation */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Card Styles */
+mat-card {
+  max-width: 600px; /* Increase max-width to 600px */
+  width: 100%;
+  padding: 40px; /* Increase padding for better spacing */
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+
+  @media screen and (max-width: 500px) {
+    max-width: 90%;
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+}
+
+/* Card Title Styles */
+mat-card-title {
+  text-align: center;
+  font-size: 28px; /* Increase font size */
+  margin-bottom: 20px;
+  color: #00796b; /* Teal color for title */
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 0 16px;
 }
 
-.navbar-brand {
-  font-size: 20px;
-  font-weight: 600;
-  margin-right: 16px;
-}
-
-.spacer {
-  flex: 1;
+/* Form Field Styles */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 button {
-  color: white;
-  text-transform: uppercase;
-  margin-left: 8px;
+  width: 100%;
 }
 
-button.active {
-  font-weight: 600;
+/* Responsive Styles */
+@media screen and (max-width: 500px) {
+  mat-card-title {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  mat-form-field {
+    margin-bottom: 10px;
+  }
 }
 
-.custom-toolbar {
-  background-color: #ff0000;
+/* Error Snackbar Styles */
+.error-snackbar {
+  background-color: #f44336 !important; /* Red background for error snackbar */
+}
+
+/* Welcome Section Styles */
+.presentation {
+  padding: 32px 0; /* Adjust padding */
+  text-align: center;
+  background-color: #e0f7fa; /* Light cyan background */
+}
+
+.presentation h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+  color: #00796b; /* Teal color for heading */
+}
+
+.presentation p {
+  font-size: 18px;
+  color: #004d40; /* Darker teal color for paragraph */
+  margin-bottom: 0; /* Remove bottom margin to reduce space */
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+}
+
+body.dark-theme .navbar {
+  background-color: #1e1e1e; /* Darker navbar background */
+}
+
+body.dark-theme .mat-card {
+  background-color: #2c2c2c; /* Dark card background */
+  color: #e0e0e0; /* Light text color */
+}
+
+body.dark-theme .mat-toolbar {
+  background-color: #1e1e1e; /* Dark toolbar background */
+}
+
+body.dark-theme .mat-button {
+  color: #e0e0e0; /* Light button text color */
+}
+
+body.dark-theme .mat-form-field {
+  background-color: #2c2c2c; /* Dark form field background */
 }
