@@ -1,13 +1,13 @@
 import {Component, OnInit, Renderer2} from '@angular/core';
-import {StorageService} from './auth/services/storage/storage.service';
 import {Router} from '@angular/router';
+import {StorageService} from "../../../auth/services/storage/storage.service";
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class HomeComponent implements OnInit {
     isEmployeeLoggedIn: boolean;
     isAdminLoggedIn: boolean;
     isDarkMode: boolean = false;
@@ -30,11 +30,6 @@ export class AppComponent implements OnInit {
         });
     }
 
-    logout(): void {
-        StorageService.signOut();
-        this.router.navigateByUrl('/login');
-    }
-
     toggleDarkMode(): void {
         this.isDarkMode = !this.isDarkMode;
         this.updateTheme();
@@ -47,5 +42,10 @@ export class AppComponent implements OnInit {
         } else {
             this.renderer.removeClass(document.body, 'dark-theme');
         }
+    }
+
+    logout(): void {
+        StorageService.signOut();
+        this.router.navigateByUrl('/login');
     }
 }

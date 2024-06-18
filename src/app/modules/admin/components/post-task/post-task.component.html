@@ -36,6 +36,19 @@
                 Required!</mat-error>
         </mat-form-field>
 
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Select the Project Name</mat-label>
+            <mat-select formControlName="projectName" name="projectName">
+                <mat-option *ngFor="let projectName of listOfProjects" [value]="projectName">
+                    {{projectName}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="taskForm.get('projectName')?.hasError('required')">This Input Is
+                Required!</mat-error>
+        </mat-form-field>
+
+
         <mat-form-field appearance="outline" class="form-field">
             <mat-label>Select the Employee</mat-label>
             <mat-select formControlName="employeeId" name="employeeId">

@@ -1,11 +1,106 @@
 /* Global Styles */
 html, body {
   height: 100%;
+  overflow: hidden;
 }
 
 body {
-  background-color:  #f0f4f8;
+  background-color: #f0f4f8;
+  color: #333333;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   transition: background-color 0.3s, color 0.3s;
+
+}
+
+/* Light Mode Colors */
+body.light-theme {
+  background-color: #f0f4f8;
+  color: #333333;
+}
+
+.mat-toolbar.light-theme {
+  background-color: #3f51b5; /* Primary color */
+  color: white;
+}
+
+.mat-button.light-theme {
+  color: #3f51b5;
+}
+
+.mat-icon.light-theme {
+  color: white;
+}
+
+/* Dark Mode Colors */
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.mat-toolbar.dark-theme {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+.mat-button.dark-theme {
+  color: #bb86fc; /* Primary color for dark mode */
+}
+
+.mat-icon.dark-theme {
+  color: #e0e0e0;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.presentation {
+  text-align: center;
+  padding: 40px;
+}
+
+.presentation h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.presentation p {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.homePage {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.startedButton {
+  margin-top: 20px;
+}
+
+/* Admin and Employee Dashboard Styles */
+.admin-dashboard, .employee-dashboard {
+  padding: 20px;
+}
+
+.admin-dashboard h2, .employee-dashboard h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.admin-dashboard p, .employee-dashboard p {
+  font-size: 16px;
 }

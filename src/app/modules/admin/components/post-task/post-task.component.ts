@@ -14,6 +14,8 @@ export class PostTaskComponent {
   taskForm: FormGroup;
   listOfEmployees: any = [];
   listOfPriorities: any = ["LOW", "MEDIUM", "HIGH"];
+  listOfProjects: any = ["PortFolio","TaskFlow","API Weather"];
+
 
   constructor(
     private fb: FormBuilder,
@@ -29,6 +31,7 @@ export class PostTaskComponent {
       dueDate: [null, [Validators.required]],
       description: [null, [Validators.required]],
       priority: [null, [Validators.required]],
+      projectName: ['', Validators.required],
     });
 
     this.getAllUsers();
@@ -39,6 +42,7 @@ export class PostTaskComponent {
       this.listOfEmployees = res;
     })
   }
+
 
   postTask(): void {
     if (this.taskForm.valid) {

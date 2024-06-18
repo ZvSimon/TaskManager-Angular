@@ -1,137 +1,25 @@
-/* app.component.css */
-
-/* General Styles */
-:host {
-  display: block;
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+/* Global styles for light and dark themes */
+body.light-theme {
+  background-color: #f0f4f8;
+  color: #333333;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
- 
-  color: #ffffff;
-  padding: 0 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.logo {
+  width: 80px;
+  height: 75px;
 }
 
-.navbar-brand {
-  font-size: 24px;
-  
-}
-.logo{
-  width: 60px;
-  height: 60px;
-  margin-right: 8px;
-}
-.startedButton{
-  display: block;
-  margin: 24px auto 0;
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
-.spacer {
-  flex: 1;
+.mat-toolbar.light-theme {
+  background-color: #3f51b5;
+  color: white;
 }
 
-button.mat-button {
-  color: #ffffff;
+.mat-toolbar.dark-theme {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
 }
-
-button.mat-icon-button {
-  color: #ffffff;
-}
-.get-started-button {
-  display: block;
-  margin: 24px auto 0; 
-
-}
-/* Presentation Section */
-.presentation {
-  text-align: center;
-  padding: 32px 16px;
-
-}
-
-.presentation h1 {
-  font-size: 36px;
-  margin-bottom: 16px;
-  color: #d4af37;
-}
-
-.presentation p {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 32px;
-}
-
-.presentation .homePage {
-  max-width: 50%;
-  height: auto;
-  border-radius: 8px;
-  margin: 16px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Admin Dashboard Section */
-.admin-dashboard,
-.employee-dashboard {
-  text-align: center;
-  padding: 32px 16px;
-}
-
-.admin-dashboard h2,
-.employee-dashboard h2 {
-  font-size: 28px;
-  margin-bottom: 16px;
-  color: #d4af37;
-}
-
-.admin-dashboard p,
-.employee-dashboard p {
-  font-size: 18px;
-  color: #333;
-}
-@media screen and (max-width: 768px) {
-  body {
-      overflow: hidden;
-  }
-}
-
-// /* Responsive Styles */
-// @media screen and (max-width: 768px) {
-//   .navbar {
-//     flex-direction: column;
-//     align-items: flex-start;
-//   }
-
-//   .navbar-brand {
-//     margin-bottom: 16px;
-//   }
-
-//   .spacer {
-//     display: none;
-//   }
-
-//   .presentation h1 {
-//     font-size: 28px;
-//   }
-
-//   .presentation p {
-//     font-size: 16px;
-//   }
-
-//   .presentation .homePage {
-//     max-width: 70%;
-//   }
-
-//   .admin-dashboard h2,
-//   .employee-dashboard h2 {
-//     font-size: 24px;
-//   }
-
-//   .admin-dashboard p,
-//   .employee-dashboard p {
-//     font-size: 16px;
-//   }
-// }

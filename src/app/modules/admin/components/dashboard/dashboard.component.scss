@@ -1,84 +1,132 @@
 .search-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 
-    .search-input {
-        width: 300px;
-        margin-right: 15px;
+  .search-input {
+    width: 100%;
+    max-width: 400px;
 
-        input {
-            padding-right: 40px;
-        }
+    input {
+      padding-right: 40px;
     }
+  }
 }
 
-
 .task-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #f8f8f8;
-    min-height: 37vh;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
 
-    .task-card {
-        width: calc(33.33% - 20px);
-        margin-bottom: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  .task-card {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 
-        .task-details {
-            padding: 20px;
-
-            .task-name {
-                font-size: 20px;
-                font-weight: bold;
-                color: #108ee9;
-                margin-bottom: 10px;
-            }
-
-            .task-description {
-                margin-bottom: 10px;
-            }
-
-            .task-info {
-                display: flex;
-                flex-wrap: wrap;
-                margin-bottom: 10px;
-                margin-top: 10px;
-
-                .info-row {
-                    flex: 0 0 50%;
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 8px;
-
-                    .info-label {
-                        font-weight: 10px;
-                        margin-right: 5px;
-                    }
-
-                    .info-value {
-                        font-weight: bold;
-                    }
-                }
-            }
-
-            .actions {
-                display: flex;
-                justify-content: flex-end;
-                margin-top: 10px;
-
-                .update-button {
-                    margin-right: 10px;
-                }
-
-                .view-button {
-                    margin-right: 10px;
-                }
-            }
-        }
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
+
+    .task-details {
+      padding: 20px;
+      border-radius: 12px;
+      background: #3f51b5;
+      border: 2px solid black;
+      color: white;
+
+      .task-projectName {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffeb3b;
+        margin-bottom: 10px;
+      }
+
+      .task-name {
+        font-size: 18px;
+        font-weight: 600;
+        color: #ffeb3b;
+        margin-bottom: 10px;
+      }
+
+      .task-description {
+        font-size: 14px;
+        color: #ffffff;
+        margin-bottom: 20px;
+      }
+
+      .task-info {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+
+        .info-row {
+          flex: 0 0 50%;
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px;
+
+          .info-label {
+            font-weight: 500;
+            color: #ffeb3b;
+            margin-right: 5px;
+          }
+
+          .info-value {
+            font-weight: 600;
+            color: #ffffff;
+
+            &.status-button {
+              button {
+                font-weight: bold;
+                border-radius: 10px;
+                height: 30px;
+                font-size: 12px;
+                transition: background-color 0.3s;
+              }
+            }
+          }
+        }
+      }
+
+      .actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .view-button,
+        .update-button,
+        .delete-button {
+          margin: 0 5px;
+          transition: transform 0.2s;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        .update-button {
+          color: #ffeb3b;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .task-card {
+      width: calc(50% - 20px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .task-card {
+      width: calc(100% - 20px);
+    }
+  }
 }

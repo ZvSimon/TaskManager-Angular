@@ -1,0 +1,105 @@
+/* Global styles for the home component */
+:host {
+  display: block;
+  height: 100%;
+}
+
+body.light-theme {
+  background-color: #f0f4f8;
+  color: #333333;
+}
+
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.logo {
+  height: 40px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+body.light-theme .navbar {
+  background-color: #3f51b5;
+  color: white;
+}
+
+body.dark-theme .navbar {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+body.light-theme .mat-button,
+body.light-theme .mat-icon {
+  color: white;
+}
+
+body.dark-theme .mat-button,
+body.dark-theme .mat-icon {
+  color: #e0e0e0;
+}
+
+/* Presentation Section Styles */
+.presentation {
+  text-align: center;
+  padding: 40px;
+}
+
+.presentation h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.presentation p {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.homePage {
+  max-width: 50%;
+  height: auto;
+  margin: 20px 0;
+}
+
+
+.startedButton {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+body.light-theme .startedButton {
+  background-color: #3f51b5;
+  color: white;
+}
+
+body.dark-theme .startedButton {
+  background-color: #bb86fc;
+  color: #121212;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .presentation {
+    padding: 20px;
+  }
+
+  .presentation h1 {
+    font-size: 28px;
+  }
+
+  .presentation p {
+    font-size: 16px;
+  }
+}
